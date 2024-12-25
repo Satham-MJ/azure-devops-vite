@@ -6,7 +6,7 @@ trigger:
 pool:
   name: Default
   demands:
-    - agent.name -equals J4RV1S
+    - Agent.OS -equals Windows_NT
 
 steps:
 # Step 1: Install Node.js
