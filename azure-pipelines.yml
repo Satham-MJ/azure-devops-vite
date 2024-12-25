@@ -4,15 +4,13 @@ trigger:
       - main
 
 pool:
-  name: Default
-  demands:
-    - agent.name -equals J4RV1S
+  vmImage: 'ubuntu-latest'
 
 steps:
 # Step 1: Install Node.js
-- task: UseNode@2
+- task: UseNode@1
   inputs:
-    versionSpec: '16.x'
+    version: '16.x'
     checkLatest: true
 
 # Step 2: Install dependencies
