@@ -12,7 +12,7 @@ steps:
 # Step 1: Install Node.js
 - task: UseNode@1
   inputs:
-    version: '16.x'
+    version: '18.x'
     checkLatest: true
 
 # Step 2: Install dependencies
