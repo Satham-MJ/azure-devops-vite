@@ -31,3 +31,13 @@ steps:
     pathToPublish: './dist'
     artifactName: 'vite-react-app'
   displayName: 'Publish Build Artifacts'
+
+# Step 5: Build Docker Image
+- script: |
+    docker build -t my-react-app .
+  displayName: 'Build Docker Image'
+
+# Step 6: Run Docker Container (Optional)
+- script: |
+    docker run -d -p 8080:80 my-react-app
+  displayName: 'Run Docker Container'
